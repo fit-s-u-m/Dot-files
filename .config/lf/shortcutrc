@@ -1,0 +1,49 @@
+map Ccac cd "/home/fitsum/.cache"
+map Ccf cd "/home/fitsum/.config"
+map CD cd "/home/fitsum/Downloads"
+map Cd cd "/home/fitsum/Documents"
+map Cdt cd "/home/fitsum/.local/share"
+map Crr cd "/home/fitsum/.local/src"
+map Ch cd "/home/fitsum"
+map Cm cd "/home/fitsum/Music"
+map Cmn cd "/mnt"
+map Cpp cd "/home/fitsum/Pictures"
+map Csc cd "/home/fitsum/.local/bin"
+map Csrc cd "/home/fitsum/.local/src"
+map Cvv cd "/home/fitsum/Videos"
+map Ebf $$EDITOR "/home/fitsum/.config/shell/bm-files"
+map Ebd $$EDITOR "/home/fitsum/.config/shell/bm-dirs"
+map Ecfx $$EDITOR "/home/fitsum/.config/x11/xresources"
+map Ecfb $$EDITOR "~/.local/src/dwmblocks/config.h"
+map Ecfv $$EDITOR "/home/fitsum/.config/nvim/init.vim"
+map Ecfz $$EDITOR "/home/fitsum/.config/zsh/.zshrc"
+map Ecfa $$EDITOR "/home/fitsum/.config/shell/aliasrc"
+map Ecfp $$EDITOR "/home/fitsum/.config/shell/profile"
+map Ecfm $$EDITOR "/home/fitsum/.config/mutt/muttrc"
+map Ecfn $$EDITOR "/home/fitsum/.config/newsboat/config"
+map Ecfu $$EDITOR "/home/fitsum/.config/newsboat/urls"
+map Ecfmb $$EDITOR "/home/fitsum/.config/ncmpcpp/bindings"
+map Ecfmc $$EDITOR "/home/fitsum/.config/ncmpcpp/config"
+map Ecfl $$EDITOR "/home/fitsum/.config/lf/lfrc"
+map EcfL $$EDITOR "/home/fitsum/.config/lf/scope"
+map EcfX $$EDITOR "/home/fitsum/.config/nsxiv/exec/key-handler"
+
+
+# Movement
+map L copyto "$fx"
+map gD cd /home/fitsum/Documents/
+map gd cd /home/fitsum/Downloads/
+map gp cd /home/fitsum/Pictures/
+map gcp cd /home/fitsum/Documents/Practice/
+map gcP cd /home/fitsum/Documents/Practice/pixi/tetris/
+map gcb cd /home/fitsum/Documents/books/codding/
+map gmb cd /home/fitsum/Documents/books/maths/
+map gC cd ~/.config
+map gnc cd ~/.config/nvim/lua/
+map glc cd ~/.config/lf/
+map gN cd ~/Notes/fit-s-u-m.github.io/_posts/
+map gv cd /home/fitsum/Documents/My Videos/
+map gm cd /home/fitsum/Documents/My Music
+map gb cd ~/.local/bin
+map gt cd ~/.local/share/Trash/files
+map gmn cd "/mnt"

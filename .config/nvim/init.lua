@@ -537,6 +537,9 @@ require("lazy").setup({
 	require("custom.plugins.copilot"),
 	require("custom.plugins.dev_doc"),
 	require("custom.plugins.obsidian"),
+	require("custom.plugins.zen-mode"),
+	require("custom.plugins.twilight"),
+	require("custom.plugins.novice"),
 }, {
 	ui = {
 		icons = vim.g.have_nerd_font and {} or {

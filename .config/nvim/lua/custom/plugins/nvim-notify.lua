@@ -1,9 +1,3 @@
--- return {
--- 	"rcarriga/nvim-notify",
--- 	opts = {
--- 		background_colour = "#000000",
--- 	},
--- }
 return {
 	"rcarriga/nvim-notify",
 	keys = {
@@ -18,7 +12,7 @@ return {
 	opts = {
 		stages = "static",
 		timeout = 3000,
-		background_colour = "#000000",
+		background_colour = "#1c1c1c", -- Replace with your desired color
 		max_height = function()
 			return math.floor(vim.o.lines * 0.75)
 		end,

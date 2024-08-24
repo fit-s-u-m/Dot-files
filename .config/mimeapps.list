@@ -24,6 +24,8 @@ application/x-extension-shtml=userapp-Floorp-YUZQS2.desktop
 application/xhtml+xml=userapp-Floorp-YUZQS2.desktop
 application/x-extension-xhtml=userapp-Floorp-YUZQS2.desktop
 application/x-extension-xht=userapp-Floorp-YUZQS2.desktop
+x-scheme-handler/tg=org.telegram.desktop._a3564341c968a0e3f0c9cec00536ccac.desktop
+x-scheme-handler/tonsite=org.telegram.desktop._a3564341c968a0e3f0c9cec00536ccac.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Floorp-YUZQS2.desktop;
@@ -36,3 +38,5 @@ application/x-extension-shtml=userapp-Floorp-YUZQS2.desktop;
 application/xhtml+xml=userapp-Floorp-YUZQS2.desktop;
 application/x-extension-xhtml=userapp-Floorp-YUZQS2.desktop;
 application/x-extension-xht=userapp-Floorp-YUZQS2.desktop;
+x-scheme-handler/tg=org.telegram.desktop._a3564341c968a0e3f0c9cec00536ccac.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop._a3564341c968a0e3f0c9cec00536ccac.desktop;

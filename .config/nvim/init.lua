@@ -516,7 +516,17 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		opts = {
-			ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc" },
+			ensure_installed = {
+				"bash",
+				"c",
+				"html",
+				"lua",
+				"markdown",
+				"vim",
+				"vimdoc",
+				"markdown",
+				"markdown_inline",
+			},
 			auto_install = true,
 			highlight = {
 				enable = true,
@@ -540,6 +550,7 @@ require("lazy").setup({
 	require("custom.plugins.zen-mode"),
 	require("custom.plugins.twilight"),
 	require("custom.plugins.novice"),
+	require("custom.plugins.nvim-notify"),
 }, {
 	ui = {
 		icons = vim.g.have_nerd_font and {} or {

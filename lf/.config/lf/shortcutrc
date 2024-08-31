@@ -1,0 +1,27 @@
+# Movement
+map L copyto "$fx"
+map gD cd /home/fitsum/Documents/
+map gd cd /home/fitsum/Downloads/
+map gP cd /home/fitsum/Pictures/
+map gv cd /home/fitsum/Video/
+map gm cd /home/fitsum/Music/
+
+#code
+map gcp cd /home/fitsum/Documents/repos/personal/
+map gcw cd /home/fitsum/Documents/repos/qene/
+map gcf cd /home/fitsum/Documents/repos/with-freinds
+
+# books
+map gcb cd /home/fitsum/Documents/books/codding/
+map gmb cd /home/fitsum/Documents/books/maths/
+
+#config
+map gC cd ~/.config/
+map glc cd ~/Dotfiles/lf/.config/lf/
+map gzc cd ~/Dotfiles/zellij/.config/zellij/
+map gnc cd ~/Dotfiles/nvim/.config/nvim/
+
+map gN cd ~/Documents/rclone/
+map gb cd ~/.local/bin
+map gt cd ~/.local/share/Trash/files
+map gmn cd "/mnt"

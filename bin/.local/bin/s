@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Check if an argument is provided
+if [ -z "$1" ]; then
+    ZOXIDE_RESULT=$(gum filter $(zoxide query -l))
+else
+    # Query zoxide for the path
+    ZOXIDE_RESULT=$(zoxide query "$1")
+    # ZOXIDE_RESULT=$(gum input --placeholder "choose")
+fi
+
+# Check if zoxide returned a result
+if [ -z "$ZOXIDE_RESULT" ]; then
+    exit 0
+fi
+# Function to remove ANSI escape codes
+strip_ansi_codes() {
+    sed 's/\x1b\[[0-9;]*m//g'
+}
+
+# Extract the folder name from the path
+FOLDER=$(basename "$ZOXIDE_RESULT")
+
+# Check if zellij is running
+if [ $ZELLIJ ]; then
+    echo "Zellij is running."
+    # Find existing sessions
+    SESSION=$(zellij ls |strip_ansi_codes | grep " $FOLDER\b" | awk '{print $1}')
+    echo "$SESSION"
+
+    CURRENTSESSION=$(zellij ls |strip_ansi_codes  | grep "(current)" | awk '{print $1}')
+
+    if [ -z "$SESSION" ]; then
+        echo "Session doesn't exist"
+        cd "$ZOXIDE_RESULT" 
+        echo "current session $CURRENTSESSION"
+        # zellij kill-session "$CURRENTSESSION"
+        # zellij attach -b "$FOLDER"
+    else
+        echo "Session exists"
+        echo "$CURRENTSESSION"
+        zellij kill-session "$CURRENTSESSION"
+        # zellij attach "$FOLDER"
+    fi
+else
+    echo "Zellij is not running."
+    # Find existing sessions
+    SESSION=$(zellij ls | strip_ansi_codes | grep "$FOLDER\b" | awk '{print $1}')
+    echo "$SESSION"
+    
+    if [ -z "$SESSION" ]; then
+        echo "Session doesn't exist"
+        cd "$ZOXIDE_RESULT"
+        zellij attach -c "$FOLDER"
+    else
+        echo "Session exists"
+        zellij attach "$SESSION"
+    fi
+fi

@@ -1,0 +1,328 @@
+di	📁
+fi	📃
+tw	🤝
+ow	📂
+ln	⛓
+or	❌
+ex	🎯
+
+*.txt	✍
+*.mom	✍
+*.me	✍
+*.ms	✍
+*.avif	🖼
+*.png	🖼
+*.webp	🖼
+*.ico	🖼
+*.jpg	📸
+*.jpe	📸
+*.jpeg	📸
+*.gif	🖼
+*.svg	🗺
+*.tif	🖼
+*.tiff	🖼
+*.xcf	🖌
+*.html	🌎
+*.xml	📰
+*.gpg	🔒
+*.css	🎨
+*.pdf	📚
+*.djvu	📚
+*.epub	📚
+*.csv	📓
+*.xlsx	📓
+*.tex	📜
+*.md	📘
+*.r	    📊
+*.R	    📊
+*.rmd	📊
+*.Rmd	📊
+*.m	    📊
+*.z64	🎮
+*.v64	🎮
+*.n64	🎮
+*.gba	🎮
+*.nes	🎮
+*.gdi	🎮
+*.1	    ℹ
+*.nfo	ℹ
+*.info	ℹ
+*.log	📙
+*.iso	📀
+*.img   📀
+*.bib   🎓
+*.ged   👪
+*.part  💔
+*.torrent 🔽
+*.jar   ♨
+*.java	♨
+
+# audio extensions
+*.wav   🎼
+*.aac   🎵
+*.au    🎵
+*.flac  🎵
+*.m4a   🎵
+*.mid   🎵
+*.midi  🎵
+*.mka   🎵
+*.mp3   🎵
+*.mpc   🎵
+*.ogg   🎵
+*.ra    🎵
+*.oga   🎵
+*.opus  🎵
+*.spx   🎵
+*.xspf  🎵
+
+# archives or compressed extensions
+*.tar   🤐
+*.tgz   🤐
+*.arc   🤐
+*.arj   🤐
+*.taz   🤐
+*.lha   🤐
+*.lz4   🤐
+*.lzh   🤐
+*.lzma  🤐
+*.tlz   🤐
+*.txz   🤐
+*.tzo   🤐
+*.t7z   🤐
+*.zip   🤐
+*.z     🤐
+*.dz    🤐
+*.gz    🤐
+*.lrz   🤐
+*.lz    🤐
+*.lzo   🤐
+*.xz    🤐
+*.zst   🤐
+*.tzst  🤐
+*.bz2   🤐
+*.bz    🤐
+*.tbz   🤐
+*.tbz2  🤐
+*.tz    🤐
+*.deb   🤐
+*.rpm   🤐
+*.jar   🤐
+*.war   🤐
+*.ear   🤐
+*.sar   🤐
+*.rar   🤐
+*.alz   🤐
+*.ace   🤐
+*.zoo   🤐
+*.cpio  🤐
+*.7z    🤐
+*.rz    🤐
+*.cab   🤐
+*.wim   🤐
+*.swm   🤐
+*.dwm   🤐
+*.esd   🤐
+*.xpi   🤐
+
+# image and video extensions
+*.jpg    📸
+*.JPG    📸
+*.jpeg   📸
+*.JPEG   📸
+*.jpe    📸
+*.mjpg   📸
+*.mjpeg  📸
+*.jxl   "🖼 "
+*.JXL   "🖼 "
+*.svg   "🗺 "
+*.svgz  "🗺 "
+*.bmp   "🖼 "
+*.pbm   "🖼 "
+*.pgm   "🖼 "
+*.ppm   "🖼 "
+*.tga   "🖼 "
+*.xbm   "🖼 "
+*.xpm   "🖼 "
+*.tif   "🖼 "
+*.tiff  "🖼 "
+*.png   "🖼 "
+*.PNG   "🖼 "
+*.webp  "🖼 "
+*.mng   "🖼 "
+*.pcx   "🖼 "
+*.ico   "🖼 "
+*.gif   "🎞 "
+*.mov    🎥
+*.mpg    🎥
+*.mpeg   🎥
+*.m2v    🎥
+*.mkv    🎥
+*.webm   🎥
+*.ogm    🎥
+*.mp4    🎥
+*.m4v    🎥
+*.mp4v   🎥
+*.vob    🎥
+*.qt     🎥
+*.nuv    🎥
+*.wmv    🎥
+*.asf    🎥
+*.rm     🎥
+*.rmvb   🎥
+*.flc    🎥
+*.avi    🎥
+*.fli    🎥
+*.flv    🎥
+*.gl     🎥
+*.dl     🎥
+*.xcf    🎥
+*.xwd    🎥
+*.yuv    🎥
+*.cgm    🎥
+*.emf    🎥
+*.ogv    🎥
+*.ogx    🎥
+*.kdenlive 🎬
+*.prproj   🎬
+
+# file extensions (vim-devicons)
+*.styl          " "
+*.sass          " "
+*.scss          " "
+*.htm           " "
+*.html          " "
+*.xhtml         " "
+*.shtml         " "
+*.slim          " "
+*.haml          " "
+*.ejs           " "
+*.css           " "
+*.qss           " "
+*.rasi          " "
+*.less          " "
+*.wiki          " "
+*.md            " "
+*.mdx           " "
+*.markdown      " "
+*.rmd           " "
+*.Rmd           " "
+*.xml           " "
+*.json          " "
+*.bson          " "
+*.webmanifest   " "
+*.js            " "
+*.mjs           " "
+*.jsx           " "
+*.rb            " "
+*.gemspec       " "
+*.rake          " "
+*.php           " "
+*.py            " "
+*.pyc           " "
+*.pyo           " "
+*.pyd           " "
+*.ipynb         " "
+*.nim           "👑"
+*.nims          "👑"
+*.coffee        " "
+*.mustache      " "
+*.hbs           " "
+*.conf          "⚙ "
+*.ini           "⚙ "
+*.yml           "🚀"
+*.yaml          "⚙ "
+*.toml          "⚙ "
+*.mk            "⚙ "
+*.twig          " "
+*.cpp           " "
+*.c++           " "
+*.cxx           " "
+*.cc            " "
+*.cp            " "
+*.c             " "
+*.cs            " "
+*.h             " "
+*.hh            " "
+*.hpp           " "
+*.hxx           " "
+*.hs            " "
+*.lhs           " "
+*.nix           " "
+*.lua           " "
+*.java          "☕ "
+*.sh            " "
+*.fish          " "
+*.bash          " "
+*.zsh           " "
+*.ksh           " "
+*.csh           " "
+*.awk           " "
+*.sed           " "
+*.m4            " "
+*.cmd           " "
+*.bat           " "
+*.ps1           " "
+*.ml            "λ "
+*.mli           "λ "
+*.diff          " "
+*.db            " "
+*.odb           " "
+*.sql           " "
+*.sqlite        " "
+*.dump          " "
+*.mongo         " "
+*.rdb           " "
+*.clj           " "
+*.cljc          " "
+*.cljs          " "
+*.edn           " "
+*.scala         " "
+*.go            " "
+*.dart          " "
+*.xul           " "
+*.sln           " "
+*.suo           " "
+*.pl            " "
+*.pm            " "
+*.t             " "
+*.rss           " "
+'*.f#'          " "
+*.fsscript      " "
+*.fsx           " "
+*.fs            " "
+*.fsi           " "
+*.rs            " "
+*.rlib          " "
+*.d             " "
+*.erl           " "
+*.hrl           " "
+*.ex            " "
+*.exs           " "
+*.eex           " "
+*.leex          " "
+*.heex          " "
+*.vim           " "
+*.ai            " "
+*.psd           " "
+*.psb           " "
+*.ts            " "
+*.tsx           " "
+*.jl            " "
+*.pp            " "
+*.vue           "﵂ "
+*.elm           " "
+*.swift         " "
+*.xcplayground  " "
+*.tex           "ﭨ "
+*.r             "ﳒ "
+*.R             "ﳒ "
+*.rproj         "鉶"
+*.sol           " ﲹ"
+*.apk           " "
+*.xapk          " "
+*.pem           " "
+
+/home/fitsum/*/public/assets/ "🏛 "
+/home/fitsum/*/public 🌏
+/home/fitsum/Downloads/ ⬇️"
+book 📚

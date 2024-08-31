@@ -1,8 +1,0 @@
-2024/08/23-12:14:51.360 630d Reusing MANIFEST /home/fitsum/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2024/08/23-12:14:51.361 630d Recovering log #3
-2024/08/23-12:14:51.361 630d Level-0 table #3: started
-2024/08/23-12:14:51.363 630d Level-0 table #3: 5522 bytes OK
-2024/08/23-12:14:51.363 630d Recovering log #6
-2024/08/23-12:14:51.364 630d Reusing old log /home/fitsum/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000006.log 
-2024/08/23-12:14:51.365 630d Delete type=2 #8
-2024/08/23-12:14:51.365 630d Delete type=0 #3

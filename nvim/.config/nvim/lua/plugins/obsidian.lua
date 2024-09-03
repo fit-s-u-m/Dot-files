@@ -15,6 +15,11 @@ return {
 		},
 		templates = {
 			path = "~/Documents/rclone/4. Template",
+			substitutions = {
+				yesterday = function()
+					return os.date("%Y-%m-%d", os.time() - 86400)
+				end,
+			},
 		},
 		notes_subdir = "Main Note",
 		ui = {

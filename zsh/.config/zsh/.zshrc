@@ -1,6 +1,3 @@
-
-# Luke's config for the Zoomer Shell
-
 function sesh-sessions() {
   {
     exec </dev/tty
@@ -90,8 +87,6 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
-# Load syntax highlighting; should be last.
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 # fnm
 FNM_PATH="/home/fitsum/.local/share/fnm"
@@ -100,16 +95,26 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
+
 # bun completions
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export EDITOR="nvim"
+
 [ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"
 #golang
 export PATH="$GOPATH/bin:$PATH"
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# Load syntax highlighting; should be last.
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+# paleofetch
 eval "$(zoxide init zsh)"
-paleofetch

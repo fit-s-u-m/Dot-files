@@ -334,7 +334,6 @@ return {
 				"markdown",
 				"vim",
 				"vimdoc",
-				"markdown",
 				"markdown_inline",
 			},
 			auto_install = true,

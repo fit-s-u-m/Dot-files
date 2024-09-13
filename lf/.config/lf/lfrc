@@ -78,6 +78,9 @@ cmd extract ${{
 		esac
 	}
 }}
+cmd zoxideAdd ${{
+    zoxide add "$fx"
+}}
 
 cmd delete ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
@@ -139,6 +142,24 @@ cmd mkdir ${{
   read ans
   mkdir $ans
 }}
+cmd copyPath ${{
+    if command -v xclip &> /dev/null; then
+        printf "%s" "$fx" | xclip -selection clipboard
+    elif [ -n "$WAYLAND_DISPLAY" ]; then
+        printf "%s" "$fx" | wl-copy
+    else
+        echo "Clipboard tool not found or unsupported environment"
+    fi
+}}
+cmd copyName ${{
+    if command -v xclip &> /dev/null; then
+        printf "%s" "$fx" | sed 's/.*\///'| xclip -selection clipboard
+    elif [ -n "$WAYLAND_DISPLAY" ]; then
+        printf "%s" "$fx" | sed 's/.*\///'| wl-copy
+    else
+        echo "Clipboard tool not found or unsupported environment"
+    fi
+}}
 
 cmd mkfile ${{
    clear;
@@ -179,13 +200,14 @@ map V push :!nvim<space>
 map m
 map md mkdir
 map mf mkfile
+map za zoxideAdd
 
 map W $setsid -f $TERMINAL >/dev/null 2>&1
 
 # Copy selected file names
-map Y $printf "%s" "$fx" | xclip -selection clipboard
+map Y copyPath
 
-map u $printf "%s" "$fx" | sed 's/.*\///' | xclip -selection clipboard
+map u $printf "%s" "$fx" | sed 's/.*\///' | wl-copy
 # map . $printf "%s" "$fx" | sed -E 's/^.+\[/https:\/\/www.youtube.com\/watch?v=/' | sed -E 's/\]\..+//' | xclip -selection clipboard
 # map <gt> $printf "%s" "$fx" | sed -E 's/^.+\[/https:\/\/piped.video\/watch?v=/' | sed -E 's/\]\..+//' | xclip -selection clipboard
 map T $nsxiv -t "$(pwd)" # opens thumbnail mode

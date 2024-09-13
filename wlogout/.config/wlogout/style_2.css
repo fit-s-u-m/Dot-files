@@ -37,7 +37,7 @@ button:hover {
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
 }
 
-button:hover#lock {
+button:hover#hibernate {
     border-radius: ${active_rad}px ${active_rad}px 0px ${active_rad}px;
     margin : ${y_hvr}px 0px 0px ${x_hvr}px;
 }
@@ -57,8 +57,8 @@ button:hover#reboot {
     margin : 0px ${x_hvr}px ${y_hvr}px 0px;
 }
 
-#lock {
-    background-image: image(url("$HOME/.config/wlogout/icons/lock_${BtnCol}.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+#hibernate {
+    background-image: image(url("$HOME/.config/wlogout/icons/hibernate_${BtnCol}.png"), url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
     border-radius: ${button_rad}px 0px 0px 0px;
     margin : ${y_mgn}px 0px 0px ${x_mgn}px;
 }

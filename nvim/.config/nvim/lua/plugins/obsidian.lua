@@ -10,7 +10,7 @@ return {
 		workspaces = {
 			{
 				name = "personal",
-				path = "~/Documents/rclone",
+				path = "~/Documents/notes/",
 			},
 		},
 		templates = {
@@ -23,10 +23,7 @@ return {
 		},
 		notes_subdir = "Main Note",
 		ui = {
-			checkboxes = {
-				[" "] = { char = "☐", hl_group = "ObsidianTodo" },
-				["x"] = { char = "✔", hl_group = "ObsidianDone" },
-			},
+			enable = false,
 		},
 	},
 }

@@ -1,0 +1,7 @@
+#/bin/bash
+
+if [ -z "/usr/bin/swayidle" ] ; then
+	echo "swayidel is installed";
+	swayidel -w timeout 300 "swaylock -f" timeout 300 "hyprctl dispatch dpms off" resume "hyprctl dispatch dpms on"
+
+fi

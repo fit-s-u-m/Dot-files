@@ -2,9 +2,22 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("i", "jj", "<Esc>", { desc = "Esc" })
 
--- git related
-vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
-vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame <CR>", { desc = "toggle current line blame" })
+-- hank related
+vim.keymap.set("n", "<leader>hp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
+vim.keymap.set("n", "<leader>ht", ":Gitsigns toggle_current_line_blame <CR>", { desc = "toggle current line blame" })
+
+--  clipboard
+function ToggleClipboard()
+	local current_clipboard = vim.opt.clipboard:get()
+	if vim.tbl_contains(current_clipboard, "unnamedplus") then
+		vim.opt.clipboard = ""
+		print("Clipboard set to default")
+	else
+		vim.opt.clipboard = "unnamedplus"
+		print("Clipboard set to unnamedplus")
+	end
+end
+vim.keymap.set("n", "<leader>tc", ":lua ToggleClipboard()<CR>", { desc = "Toogle global clipboard" })
 
 -- splits
 vim.keymap.set("n", "<leader>sv", ":vsplit %<CR>", { desc = "toggle current line blame" })
@@ -28,13 +41,14 @@ local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
-vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
+vim.keymap.set("n", "<leader>ss", builtin.spell_suggest, { desc = "[S]pell [S]uggest" })
 vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+-- vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+vim.keymap.set("n", "<leader><leader>", builtin.git_status, { desc = "[ ] Find existing buffers" })
 -- Slightly advanced example of overriding default behavior and theme
 vim.keymap.set("n", "<leader>;", function()
 	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({

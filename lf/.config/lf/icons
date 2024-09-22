@@ -380,3 +380,21 @@ Vagrantfile             
 /home/fitsum/Music/ 
 /home/fitsum/Videos/ 󱦪
 /home/fitsum/Downloads/ 
+
+.github/	 
+.git/ 󰊢
+node_modules/ 
+*README.md	
+
+notes/ 󰠮
+blog/ 󰀂
+
+/home/fitsum/.config 
+Dotfiles/ 
+bin/ 
+
+public/ 󰇧
+asset/ 
+assets/ 
+lib/ 󰌱
+

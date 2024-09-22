@@ -22,6 +22,6 @@ map gzc cd ~/Dotfiles/zellij/.config/zellij/
 map gnc cd ~/Dotfiles/nvim/.config/nvim/
 
 map gN cd ~/Documents/notes/
-map gb cd ~/.local/bin
+map gb cd ~/Documents/blog/content
 map gt cd ~/.local/share/Trash/files
 map gmn cd "/mnt"

@@ -105,6 +105,8 @@ export EDITOR="nvim"
 [ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"
 #golang
 export PATH="$GOPATH/bin:$PATH"
+#resume ollama install models
+export OLLAMA_NOPRUNE=true
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

@@ -181,8 +181,8 @@ map <c-r> reload
 map <c-s> set hidden!
 map <enter> shell
 map X !$f
-map o &mimeopen "$f"
-map O $mimeopen --ask "$f"
+map o $handlr open "$f"
+map O $xdg-open -s "$f"
 map <esc> unselect
 
 

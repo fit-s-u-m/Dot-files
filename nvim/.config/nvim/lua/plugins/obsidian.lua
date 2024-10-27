@@ -21,7 +21,7 @@ return {
 				end,
 			},
 		},
-		notes_subdir = "Main Note",
+		notes_subdir = "5. Main Note",
 		ui = {
 			enable = false,
 		},

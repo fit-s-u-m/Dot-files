@@ -107,9 +107,10 @@ export EDITOR="nvim"
 export PATH="$GOPATH/bin:$PATH"
 #resume ollama install models
 export OLLAMA_NOPRUNE=true
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 # Load syntax highlighting; should be last.
@@ -119,5 +120,6 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 [[ "$(tty)" == /dev/tty1 ]] && Hyprland
 
-# paleofetch
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+unix

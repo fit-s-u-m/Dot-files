@@ -2,7 +2,8 @@
 
 # Check if an argument is provided
 if [ -z "$1" ]; then
-    ZOXIDE_RESULT=$(gum filter $(zoxide query -l))
+    ZOXIDE_RESULT=$(zoxide query -i)
+    # ZOXIDE_RESULT=$(gum filter $(zoxide query -l))
 else
     # Query zoxide for the path
     ZOXIDE_RESULT=$(zoxide query "$1")

@@ -2,7 +2,7 @@
     "label" : "hibernate",
     "action" : "systemctl hibernate",
     "text" : "Hibernate",
-    "keybind" : "l"
+    "keybind" : "h"
 }
 
 {

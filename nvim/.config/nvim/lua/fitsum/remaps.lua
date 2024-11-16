@@ -6,6 +6,9 @@ vim.keymap.set("i", "jj", "<Esc>", { desc = "Esc" })
 vim.keymap.set("n", "<leader>hp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
 vim.keymap.set("n", "<leader>ht", ":Gitsigns toggle_current_line_blame <CR>", { desc = "toggle current line blame" })
 
+-- lazy-git
+vim.keymap.set("n", "<leader>gl", ":LazyGit <CR>", { desc = "Open lazy git" })
+
 --  clipboard
 function ToggleClipboard()
 	local current_clipboard = vim.opt.clipboard:get()

@@ -1,7 +1,7 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds  clear-defaults=true{
     normal {
-        // uncomment this and adjust key if using copy_on_select=false
+        // uncomment this and adjust key if using 
         // bind "Alt c" { Copy; }
     }
     locked {
@@ -172,10 +172,11 @@ plugins {
 }
 scrollback_editor "/usr/bin/nvim"
 pane_frames false
-default_shell "zsh"
+copy_command "wl-copy"                    // wayland
+default_shell "nu"
 default_mode "locked"
 theme "catppuccin-mocha" // or latte, frappe and macchiato
-copy_command "xclip -selection clipboard" // x11
+// copy_command "xclip -selection clipboard" // x11
 layout "file:~/.config/zellij/layouts/default.kdl" 
 
 //default_layout "compact"
@@ -291,7 +292,6 @@ layout "file:~/.config/zellij/layouts/default.kdl"
 // that will be used by default if this option is not set.
 // Examples:
 //
-// copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 
 // Choose the destination for copied text

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 
 # Define the idle timeout values (in seconds)
 LOCK_TIMEOUT=300       # Lock the screen after 5 minutes of inactivity

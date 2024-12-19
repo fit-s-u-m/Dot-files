@@ -173,7 +173,7 @@ plugins {
 scrollback_editor "/usr/bin/nvim"
 pane_frames false
 copy_command "wl-copy"                    // wayland
-default_shell "nu"
+default_shell "zsh"
 default_mode "locked"
 theme "catppuccin-mocha" // or latte, frappe and macchiato
 // copy_command "xclip -selection clipboard" // x11

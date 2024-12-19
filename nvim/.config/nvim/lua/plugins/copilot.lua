@@ -1,5 +1,5 @@
 return {
-  'https://github.com/github/copilot.vim.git',
+  -- 'https://github.com/github/copilot.vim.git',
   -- 'zbirenbaum/copilot.lua',
   -- cmd = 'Copilot',
   -- build = ':Copilot auth',

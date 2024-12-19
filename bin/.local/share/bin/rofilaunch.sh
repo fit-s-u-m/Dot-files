@@ -9,11 +9,6 @@ roconf="${confDir}/rofi/styles/style_${rofiStyle}.rasi"
 
 [[ "${rofiScale}" =~ ^[0-9]+$ ]] || rofiScale=10
 
-if [ ! -f "${roconf}" ] ; then
-    roconf="$(find "${confDir}/rofi/styles" -type f -name "style_*.rasi" | sort -t '_' -k 2 -n | head -1)"
-fi
-
-
 #// rofi action
 
 case "${1}" in
@@ -41,5 +36,5 @@ i_override="configuration {icon-theme: \"${i_override}\";}"
 
 #// launch rofi
 
-rofi -show "${r_mode}" -theme-str "${r_scale}" -theme-str "${r_override}" -theme-str "${i_override}" -config "${roconf}"
+rofi -show "${r_mode}"
 

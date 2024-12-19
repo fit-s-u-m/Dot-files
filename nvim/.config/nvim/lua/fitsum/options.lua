@@ -8,9 +8,10 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.showmode = false
 vim.opt.conceallevel = 1
+vim.o.termguicolors = true
 
 -- Set shell to bash or your preferred shell
-vim.opt.shell = "/bin/zsh"
+vim.opt.shell = "/run/current-system/sw/bin/zsh"
 
 -- Ensure shell commands behave like in Vim
 vim.opt.shellcmdflag = "-c"
@@ -45,6 +46,23 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+-- transparent
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
+
+if vim.g.neovide then
+	vim.g.neovide_transparency = 0.3
+	vim.g.neovide_window_blurred = true
+	-- shadow
+	vim.g.neovide_floating_shadow = true
+	vim.g.neovide_floating_z_height = 10
+	vim.g.neovide_light_angle_degrees = 45
+	vim.g.neovide_light_radius = 5
+end

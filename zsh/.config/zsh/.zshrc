@@ -1,13 +1,3 @@
-function sesh-sessions() {
-  {
-    exec </dev/tty
-    exec <&1
-    local session
-    session=$(sesh list -t -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
-    [[ -z "$session" ]] && return
-    sesh connect $session
-  }
-}
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -88,34 +78,33 @@ bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
 
-# fnm
-FNM_PATH="/home/fitsum/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/fitsum/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
+# # fnm
+# FNM_PATH="/home/fitsum/.local/share/fnm"
+# if [ -d "$FNM_PATH" ]; then
+#   export PATH="/home/fitsum/.local/share/fnm:$PATH"
+#   eval "`fnm env`"
+# fi
 
 
 # bun completions
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.deno/bin/:$PATH"
+# export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
 
-[ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"
+# [ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"
 #golang
 export PATH="$GOPATH/bin:$PATH"
 #resume ollama install models
-export OLLAMA_NOPRUNE=true
+# export OLLAMA_NOPRUNE=true
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 # Load syntax highlighting; should be last.
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
@@ -123,4 +112,4 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-unix
+fastfetch

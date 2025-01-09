@@ -11,8 +11,8 @@ HIBERNATE_TIMEOUT=3600 # Hibernate after 1 hours of inactivity
 LOCK_CMD='swaylock'
 
 # Command to turn off the display
-DPMS_OFF_CMD='swaymsg "output * dpms off"'
-DPMS_ON_CMD='swaymsg "output * dpms on"'
+DPMS_OFF_CMD='hyprctl dispatch dpms off'
+DPMS_ON_CMD='hyprctl dispatch dpms on'
 
 # Command to hibernate the system
 HIBERNATE_CMD='systemctl hibernate'

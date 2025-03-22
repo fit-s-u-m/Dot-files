@@ -67,14 +67,14 @@ return {
 
       -- Harpoon next and previous.
       {
-        '<c-j>',
+        '<c-]>',
         function()
           harpoon:list():next()
         end,
         desc = 'Harpoon next buffer',
       },
       {
-        '<c-k>',
+        '<c-[>',
         function()
           harpoon:list():prev()
         end,
@@ -83,7 +83,7 @@ return {
 
       -- Harpoon user interface.
       {
-        '<c-h>',
+        '<c-0>',
         function()
           harpoon.ui:toggle_quick_menu(harpoon:list())
         end,
@@ -98,13 +98,13 @@ return {
       },
 
       -- Use Telescope as Harpoon user interface.
-      {
-        '<c-l>',
-        function()
-          toggle_telescope(harpoon:list())
-        end,
-        desc = 'Open Harpoon window',
-      },
+      -- {
+      --   '<c-l>',
+      --   function()
+      --     toggle_telescope(harpoon:list())
+      --   end,
+      --   desc = 'Open Harpoon window',
+      -- },
     }
   end,
 

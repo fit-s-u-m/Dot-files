@@ -89,22 +89,50 @@ bindkey -M visual '^[[P' vi-delete
 # bun completions
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-# export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
 
 # [ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"
 #golang
 export PATH="$GOPATH/bin:$PATH"
-#resume ollama install models
-# export OLLAMA_NOPRUNE=true
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+alias q=exit
+alias ls="eza --icons"
+alias ll="eza -lh --icons --grid --group-directories-first"
+alias la="eza -lah --icons --grid --group-directories-first"
+alias v=nvim
+alias tree="eza -T --icons"
+alias ..="cd .."
+-() {
+  cd -
+}
 
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-# Load syntax highlighting; should be last.
-# source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # Optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+function l() {
+ local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+ yazi "$@" --cwd-file="$tmp"
+ if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+   builtin cd -- "$cwd"
+ fi
+ rm -f -- "$tmp"
+}
+# Source carapace completion
+source <(carapace _carapace)
+# for ocaml
+eval "$(opam env)"
+fzf_cd() {
+    local dir
+    dir=$(fzf)  # Use fzf to select a file or directory
+    if [[ -n "$dir" ]]; then
+        cd "$(dirname "$dir")"  # Change to the directory containing the selected file/directory
+    fi
+}
+
+# bind the funciton fzf to ctrl + f
+zle -N fzf_cd_widget fzf_cd
+bindkey '^f' fzf_cd_widget
+eval "$(atuin init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
@@ -112,4 +140,4 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-fastfetch
+# fastfetch

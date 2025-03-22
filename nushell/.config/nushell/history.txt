@@ -163,3 +163,8 @@ ls | grep "Squid" l
 l
 ls
 exit
+ls
+tmux 
+ls
+ls | grep "hello"
+ls

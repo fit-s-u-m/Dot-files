@@ -105,6 +105,9 @@ local jdtls_path = "/run/current-system/sw/bin/jdtls"
 local rust_path = "/run/current-system/sw/bin/rust-analyzer" 
 local lua_path = "/run/current-system/sw/bin/lua-lsp" 
 local go_path = "/run/current-system/sw/bin/gopls" 
+local clangd_path = "/run/current-system/sw/bin/clangd" 
+local emmet_path ="/run/current-system/sw/bin/emmet-ls"
+local tailwind_path ="/run/current-system/sw/bin/tailwindcss-language-server"
 
 lspconfig.gopls.setup({
     cmd = {go_path },
@@ -146,12 +149,58 @@ lspconfig.rust_analyzer.setup {
   root_dir = require('lspconfig.util').root_pattern("Cargo.toml", "rust-project.json", ".git"),
 }
 
+lspconfig.clangd.setup {
+  cmd = { clangd_path }, 
+  on_attach = on_attach,
+  capabilities = capabilities, 
+  filetypes = { "c", "cpp", "objc", "objcpp" }, 
+  root_dir = require('lspconfig.util').root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+}
+
+lspconfig.emmet_ls.setup({
+     cmd = { emmet_path ,"--stdio"}, 
+    capabilities = capabilities,
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+    init_options = {
+      html = {
+        options = {
+          ["bem.enabled"] = true,
+        },
+      },
+    }
+})
+
+lspconfig.tailwindcss.setup({
+    cmd = { tailwind_path }, 
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
+
 
 require('lspconfig').jdtls.setup {
   cmd = { jdtls_path },
   on_attach = on_attach,
+  --   on_attach = function(client, bufnr)
+  --   -- Set up keymaps, capabilities, etc.
+  --   on_attach(client, bufnr)
+  --
+  --   -- Format on save using google-java-format
+  --   vim.api.nvim_create_autocmd("BufWritePre", {
+  --     pattern = "*.java",
+  --     callback = function()
+  --       vim.cmd("silent! !google-java-format -i " .. vim.fn.expand("%"))
+  --     end,
+  --   })
+  -- end,
   capabilities = capabilities,
   filetypes = { "java" },
+   settings = {
+    java = {
+      format = {
+        enabled = false,  -- Enable formatting
+      },
+    },
+  },
 }
 
 vim.api.nvim_create_autocmd('FileType', {

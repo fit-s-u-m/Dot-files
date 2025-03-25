@@ -42,7 +42,7 @@ scrDir="$(dirname "$(realpath "$0")")"
 source "${scrDir}/globalcontrol.sh"
 
 # Update these paths to your desired directories
-wallDir="${HOME}/Pictures/bg/"
+wallDir="${HOME}/Pictures/bg"
 cacheDir="${HOME}/.cache/swww"
 thmbDir="${cacheDir}/thumbs"
 dcolDir="${cacheDir}/dcolors"

@@ -13,10 +13,9 @@
 
 // positions generated based on config.ctl //
 
-    "modules-left": ["custom/padd","custom/l_end","cpu","memory","custom/cpuinfo","custom/gpuinfo","custom/r_end","custom/l_end","idle_inhibitor","clock","custom/r_end"],
+    "modules-left": ["custom/padd","custom/l_end","cpu","memory","custom/cpuinfo","custom/gpuinfo","custom/r_end","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/l_end","custom/notifications","custom/spotify","custom/r_end"],
     "modules-center": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/padd"],
     "modules-right": ["custom/padd","custom/l_end","network","custom/r_end","custom/l_end","backlight","pulseaudio","pulseaudio#microphone","custom/updates","custom/r_end","custom/l_end","privacy","tray","battery","custom/r_end"],
-
 
 // sourced from modules based on config.ctl //
 
@@ -174,9 +173,9 @@
 
     "network": {
         "tooltip": true,
-        "format-wifi": " ",
+        "format-wifi": " <span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "rotate": 0,
-        "format-ethernet": "󰈀 ",
+        "format-ethernet": "󰈀 <span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 ",
@@ -186,9 +185,9 @@
     },
 
 "pulseaudio": {
-    "format": "{icon} {volume}",
+    "format": "{icon}  {volume}",
     "rotate": 0,
-    "format-muted": "婢",
+     "format-muted": "󰸈",
     "on-click": "pavucontrol -t 3",
     "on-click-right": "volumecontrol.sh -s ''",
     "on-click-middle": "volumecontrol.sh -o m",
@@ -210,7 +209,7 @@
 "pulseaudio#microphone": {
     "format": "{format_source}",
     "rotate": 0,
-    "format-source": "",
+    "format-source": " ",
     "format-source-muted": "",
     "on-click": "pavucontrol -t 4",
     "on-click-middle": "volumecontrol.sh -i m",
@@ -229,11 +228,6 @@
         "interval": 86400, // once every day
         "tooltip": true,
         "signal": 20,
-    },
-    "custom/keybindhint": {
-        "format": " ",
-        "rotate": 0,
-        "on-click": "keybinds_hint.sh"
     },
 
     "privacy": {
@@ -296,16 +290,52 @@
         "tooltip": true
     },
 
-    "custom/wbar": {
-        "format": "{}", //    //
+    "custom/notifications": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": "",
+        "email-notification": " <span foreground='white'><sup></sup></span>",
+        "chat-notification": "󱋊 <span foreground='white'><sup></sup></span>",
+        "warning-notification": "󱨪 <span foreground='yellow'><sup></sup></span>",
+        "error-notification": "󱨪 <span foreground='red'><sup></sup></span>",
+        "network-notification": "󱂇 <span foreground='white'><sup></sup></span>",
+        "battery-notification": "󰁺 <span foreground='white'><sup></sup></span>",
+        "update-notification": "󰚰 <span foreground='white'><sup></sup></span>",
+        "music-notification": "󰝚 <span foreground='white'><sup></sup></span>",
+        "volume-notification": "󰕿 <span foreground='white'><sup></sup></span>",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    // "on-click": "swaync-client -t -sw",
+    "on-click" : "sleep 0.1 && task-waybar",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+    "custom/spotify": {
+        "exec": "mediaplayer.py --player spotify",
+        "format": " {}",
         "rotate": 0,
-        "exec": "echo ; echo  switch bar //  dock",
-        "on-click": "wbarconfgen.sh n",
-        "on-click-right": "wbarconfgen.sh p",
-        "on-click-middle": "sleep 0.1 && quickapps.sh kitty firefox spotify code dolphin",
-        "interval" : 86400,
+        "return-type": "json",
+        "on-click": "playerctl play-pause --player spotify",
+        "on-click-right": "playerctl next --player spotify",
+        "on-click-middle": "playerctl previous --player spotify",
+        "on-scroll-up": "volumecontrol.sh -p spotify i",
+        "on-scroll-down": "volumecontrol.sh -p spotify d",
+        "max-length": 25,
+        "escape": true,
         "tooltip": true
     },
+
 
     "custom/cliphist": {
         "format": "{}",

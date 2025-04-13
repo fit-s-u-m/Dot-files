@@ -173,14 +173,14 @@
 
     "network": {
         "tooltip": true,
-        "format-wifi": " <span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "format-wifi": " <span foreground='#99ffdd' > {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "rotate": 0,
-        "format-ethernet": "󰈀 <span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
-        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "format-ethernet": "󰈀 <span foreground='#99ffdd' > {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "tooltip-format": "<span background='#1e1e2e'> Network: <span foreground='#ffcc66'><b>{essid}</b></span>\nSignal strength: <span foreground='#ffcc66'>{signaldBm}dBm ({signalStrength}%)</span>\nFrequency: <span foreground='#ffcc66'>{frequency}MHz</span>\nInterface: <span foreground='#ffcc66'>{ifname}</span>\nIP: <span foreground='#ffcc66'>{ipaddr}/{cidr}</span>\nGateway: <span foreground='#ffcc66'>{gwaddr}</span>\nNetmask: <span foreground='#ffcc66'>{netmask}</span> </span>",
         "format-linked": "󰈀 {ifname} (No IP)",
-        "format-disconnected": "󰖪 ",
+        "format-disconnected": "<span foreground='#99ffdd' >󰖪 </span>",
         "tooltip-format-disconnected": "Disconnected",
-        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "format-alt": "<span foreground='#99ffdd' > {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2,
     },
 
@@ -279,47 +279,25 @@
         "tooltip": true
     },
 
-    "custom/theme": {
-        "format": "{}",
-        "rotate": 0,
-        "exec": "echo ; echo 󰟡 switch theme",
-        "on-click": "themeswitch.sh -n",
-        "on-click-right": "themeswitch.sh -p",
-        "on-click-middle": "sleep 0.1 && themeselect.sh",
-        "interval" : 86400, // once every day
-        "tooltip": true
-    },
-
     "custom/notifications": {
-    "tooltip": true,
-    "format": "{icon}",
-    "format-icons": {
-        "notification": "<span foreground='red'><sup></sup></span>",
-        "none": "",
-        "dnd-notification": "<span foreground='red'><sup></sup></span>",
-        "dnd-none": "",
-        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-        "inhibited-none": "",
-        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-        "dnd-inhibited-none": "",
-        "email-notification": " <span foreground='white'><sup></sup></span>",
-        "chat-notification": "󱋊 <span foreground='white'><sup></sup></span>",
-        "warning-notification": "󱨪 <span foreground='yellow'><sup></sup></span>",
-        "error-notification": "󱨪 <span foreground='red'><sup></sup></span>",
-        "network-notification": "󱂇 <span foreground='white'><sup></sup></span>",
-        "battery-notification": "󰁺 <span foreground='white'><sup></sup></span>",
-        "update-notification": "󰚰 <span foreground='white'><sup></sup></span>",
-        "music-notification": "󰝚 <span foreground='white'><sup></sup></span>",
-        "volume-notification": "󰕿 <span foreground='white'><sup></sup></span>",
+            "tooltip" : false,
+            "format" : "{icon} {}",
+            "format-icons" : {
+            "notification" : "🔔<span foreground='red'><sup></sup></span>",
+            "none" : "🔔",
+            "dnd-notification" : "🔕<span foreground='red'><sup></sup></span>",
+            "dnd-none" : "🔕",
+            "inhibited-notification" : "<span foreground='red'><sup></sup></span>",
+            "inhibited-none" : "",
+            "dnd-inhibited-notification" : "🔔<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none" : "🔔",
+          },
+          "return-type" : "json",
+          "exec-if" : "which swaync-client",
+          "exec" : "swaync-client -swb",
+          "on-click" : "sleep 0.1 && task-waybar",
+          "escape" : true,
     },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    // "on-click": "swaync-client -t -sw",
-    "on-click" : "sleep 0.1 && task-waybar",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
 
     "custom/spotify": {
         "exec": "mediaplayer.py --player spotify",

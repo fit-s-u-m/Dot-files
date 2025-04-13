@@ -4,7 +4,6 @@
 	font-family: "JetBrainsMono Nerd Font";
 	font-weight: bold;
 	min-height: 0;
-	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
 	font-size: 96%;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
@@ -77,10 +76,8 @@ window#waybar.empty #window {
 /* This section can be use if you want to separate waybar modules */
 .modules-left, .modules-center, .modules-right {
         background: rgba(255, 255, 255, 0.4);
-        opacity:1;
- 	border: 2px solid @overlay0;
-	padding-top: 0px;
-	padding-bottom: 0px;
+ 	border: 1px solid @overlay0;
+	padding: 2px 2px ;
         margin:0;
 	border-radius: 5px;
 } 
@@ -130,10 +127,7 @@ window#waybar.empty #window {
 #custom-rr_end {
         background: rgba(0, 0, 0, 0.6);
         opacity:1;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-right: 6px;
-	padding-left: 6px;
+        padding: 4px 6px;
 }
 
 #bluetooth,
@@ -247,6 +241,7 @@ window#waybar.empty #window {
 
 #network {
   color: @teal;
+  background: rgba(0, 0, 0, 0.6);
 }
 #network.disconnected,
 #network.disabled {
@@ -312,3 +307,8 @@ window#waybar.empty #window {
     margin-left: 6px;
     padding-left: 0px;
 }
+tooltip {
+  text-shadow: none;
+  background: rgba(0, 0, 0, 0.8);
+}
+

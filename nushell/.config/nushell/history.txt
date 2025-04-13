@@ -168,3 +168,5 @@ tmux
 ls
 ls | grep "hello"
 ls
+q
+nano ~/.config/mimeapps.list<\n>

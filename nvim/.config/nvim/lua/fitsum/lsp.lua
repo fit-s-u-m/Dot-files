@@ -108,6 +108,7 @@ local go_path = "/run/current-system/sw/bin/gopls"
 local clangd_path = "/run/current-system/sw/bin/clangd" 
 local emmet_path ="/run/current-system/sw/bin/emmet-ls"
 local tailwind_path ="/run/current-system/sw/bin/tailwindcss-language-server"
+local haskell_path ="/run/current-system/sw/bin/haskell-language-server-wrapper"
 
 lspconfig.gopls.setup({
     cmd = {go_path },
@@ -174,6 +175,13 @@ lspconfig.tailwindcss.setup({
     cmd = { tailwind_path }, 
     capabilities = capabilities,
     on_attach = on_attach,
+})
+lspconfig.hls.setup({
+  cmd = {haskell_path,"--lsp"},
+  filetypes = { "haskell", "lhaskell" },
+  capabilities = capabilities,
+  on_attach = on_attach,
+
 })
 
 

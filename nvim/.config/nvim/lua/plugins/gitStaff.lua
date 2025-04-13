@@ -45,6 +45,15 @@ return {
 		end,
 	},
 	{
+	  'pwntester/octo.nvim',
+				config = function()
+					require("octo").setup({enable_builtin=true})
+			 end,
+		keys ={
+			 {"<leader>O","<cmd>Octo<cr>",desc="open Octo for github cli"}
+		}
+	},
+	{
 		"ThePrimeagen/git-worktree.nvim",
 		config = function()
 			require("git-worktree").setup({

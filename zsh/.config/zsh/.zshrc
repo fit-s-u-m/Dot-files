@@ -90,6 +90,7 @@ bindkey -M visual '^[[P' vi-delete
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin/:$PATH"
 export EDITOR="nvim"
 
 # [ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"

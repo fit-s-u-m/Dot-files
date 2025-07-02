@@ -102,6 +102,7 @@ alias ls="eza --icons"
 alias ll="eza -lh --icons --grid --group-directories-first"
 alias la="eza -lah --icons --grid --group-directories-first"
 alias v=nvim
+alias cargow="cargo watch -c -q -w src -x 'run -q'"
 alias tree="eza -T --icons"
 alias ..="cd .."
 -() {

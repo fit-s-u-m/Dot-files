@@ -170,3 +170,112 @@ ls | grep "hello"
 ls
 q
 nano ~/.config/mimeapps.list<\n>
+clear
+http localhost:3000/hello
+man http
+http -h
+http get localhost:3000/hello
+http get http://localhost:3000/hello
+q
+exit 
+mkdir ~/.local/share/atuin/<\n>atuin init nu | save ~/.local/share/atuin/init.nu
+q
+exit
+clear
+fjdskfj
+fkjfjasd
+gc
+gsgt
+gst
+gc
+git comit 
+git commit
+clear
+git status
+clear
+l
+clear
+gst
+clear
+open src/main.rs
+ls
+ls | where type == file
+clear
+[1,2,3]
+ls
+http get http://localhost:3000/hello
+http get http://localhost:3000/greet  {name:"fitsum"}
+http -h
+http post -h
+http post  http://localhost:3000/greet  "{name:"fitsum"}"
+http post  http://localhost:3000/greet  '{name:"fitsum"}'
+http post  http://localhost:3000/greet  '{"name":"fitsum"}'
+http post  http://localhost:3000/greet  '{name:fitsum}'
+http post  http://localhost:3000/greet  {name:fitsum}
+http post  http://localhost:3000/greet  { name: fitsum }
+http post --content-type application/json https://www.example.com { field: value }<\n>
+http post --content-type application/json https://localhost:3000/greet { name: fitsum }
+http post --content-type application/json http://localhost:3000/greet { name: fitsum }
+http post http://localhost:3000/greet { name: fitsum }
+http post --content-type application/json http://localhost:3000/greet { name: fitsum }
+clear
+http post --content-type application/json http://localhost:3000/greet { name: fitsum }
+http get http://localhost:3000/hello/fitsum
+http get http://localhost:3000/greet/fitsum
+clear
+http get http://localhost:3000/greet/fitsum
+http post --content-type application/json http://localhost:3000/greet { name: fitsum }
+clear
+xh get http://localhost:3000/greet/fitsum
+clear
+xh post http://localhost:3000/greet {name:fitsum}
+xh post http://localhost:3000/greet "{name:fitsum}"
+xh post :3000/greet name=fitsum
+clear
+xh get :3000/todos
+xh post :3000/addTodo title= make your bed
+xh post :3000/addTodo title=work
+xh post :3000/addTodo title=work_time
+xh get :3000/todos
+xh delete :3000/todos/work
+xh delete :3000/todos/1
+xh delete :3000/todos/work
+xh post :3000/addTodo title=work_time
+xh post :3000/addTodo title=work
+xh delete :3000/todos/work
+clear
+xh get :3000/todos
+xh delete :3000/todos/1
+clear
+xh post :3000/addTodo title=work
+xh put :3000/todos/1 title=works
+xh get :3000/todos
+xh post :3000/addTodo title=work
+xh get :3000/todos
+xh put :3000/todos/1 title=works
+xh get :3000/todos
+xh post :3000/addTodo title=work
+xh get :3000/todos
+xh put :3000/todos/1 title=works
+xh get :3000/todos
+clear
+cargo build
+v
+ga
+gAdd
+gadd 
+git status
+gca 
+git add .
+fg
+git add .
+fg
+clear
+ls
+clear
+ls
+gst
+git add .
+rm -f .git/index.lock<\n>
+ls
+git add .

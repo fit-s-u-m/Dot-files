@@ -909,10 +909,11 @@ alias q = exit
 alias ll = ls -l
 alias lt = eza --tree --level=2 --long --icons --git
 alias v = nvim
+alias cargow = cargo watch -c -q -w src -x 'run -q'
 
 # Git
-alias gc = git commit -m
-alias gca = git commit -a -m
+alias gc = git commit
+alias gcm = git commit -m
 alias gp = git push origin HEAD
 alias gpu = git pull origin
 alias gst = git status

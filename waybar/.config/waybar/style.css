@@ -124,10 +124,11 @@ window#waybar.empty #window {
 #custom-sl_end,
 #custom-sr_end,
 #custom-rl_end,
+#custom-ethiopian_day,
 #custom-rr_end {
         background: rgba(0, 0, 0, 0.6);
         opacity:1;
-        padding: 4px 6px;
+        padding: 2px 3px;
 }
 
 #bluetooth,
@@ -274,7 +275,7 @@ window#waybar.empty #window {
 
 #custom-r_end {
     border-radius: 0px 21px 21px 0px;
-    margin-right: 6px;
+    margin-right: 3px;
     padding-right: 0px;
 }
 
@@ -286,25 +287,25 @@ window#waybar.empty #window {
 
 #custom-sr_end {
     border-radius: 0px;
-    margin-right: 6px;
+    margin-right: 3px;
     padding-right: 0px;
 }
 
 #custom-sl_end {
     border-radius: 0px;
-    margin-left: 6px;
+    margin-left: 3px;
     padding-left: 0px;
 }
 
 #custom-rr_end {
     border-radius: 0px 7px 7px 0px;
-    margin-right: 6px;
+    margin-right: 3px;
     padding-right: 0px;
 }
 
 #custom-rl_end {
     border-radius: 7px 0px 0px 7px;
-    margin-left: 6px;
+    margin-left: 3px;
     padding-left: 0px;
 }
 tooltip {

@@ -1,0 +1,23 @@
+#!/home/fitsum/Dot-files/bin/.local/bin/cal/venv/bin/python
+
+import sys
+from kenat import Kenat
+
+# Get Ethiopian date as a dictionary
+today = Kenat.now()
+eth_date = today.get_ethiopian()  # {'year': xxxx, 'month': xx, 'day': xx}
+
+# Read argument (default: all)
+arg = sys.argv[1].lower() if len(sys.argv) > 1 else "all"
+
+if arg == "day":
+    print(eth_date['day'])
+elif arg == "month":
+    print(eth_date['month'])
+elif arg == "year":
+    print(eth_date['year'])
+elif arg == "all":
+    print(f"{eth_date['day']:02d}-{eth_date['month']:02d}-{eth_date['year']}")
+else:
+    print(f"Invalid argument: {arg}")
+    print("Use: day | month | year | all")

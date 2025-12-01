@@ -279,3 +279,4 @@ git add .
 rm -f .git/index.lock<\n>
 ls
 git add .
+exit

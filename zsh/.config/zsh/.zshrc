@@ -91,6 +91,14 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin/:$PATH"
+export PATH=" ~/.local/share/coursier/bin:$PATH"
+
+# Set pyenv root
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# Initialize pyenv
 export EDITOR="nvim"
 
 # [ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"
@@ -108,7 +116,8 @@ alias ..="cd .."
 -() {
   cd -
 }
-
+alias cd="z"
+export OBSIDIAN_REST_API_KEY="210a7d0530314ab4130d05c871769073e4afc7e656aadf3f8b5fc01dc6ae8f1e"
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # Optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 function l() {
@@ -142,4 +151,5 @@ eval "$(atuin init zsh)"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+# eval "$(pyenv virtualenv-init -)"
 # fastfetch

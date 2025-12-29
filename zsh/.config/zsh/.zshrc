@@ -92,6 +92,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin/:$PATH"
 export PATH=" ~/.local/share/coursier/bin:$PATH"
+export FLYCTL_INSTALL="/home/fitsum/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # Set pyenv root
 export PYENV_ROOT="$HOME/.pyenv"
@@ -103,7 +105,9 @@ export EDITOR="nvim"
 
 # [ -s "/home/fitsum/.bun/_bun" ] && source "/home/fitsum/.bun/_bun"
 #golang
+export GOPATH=$HOME/go  
 export PATH="$GOPATH/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 alias q=exit
 alias ls="eza --icons"
@@ -153,3 +157,6 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 # eval "$(pyenv virtualenv-init -)"
 # fastfetch
+
+. "$HOME/.local/share/../bin/env"
+eval "$(uvx --generate-shell-completion zsh)"

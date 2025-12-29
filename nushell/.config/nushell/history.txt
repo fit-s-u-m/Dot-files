@@ -280,3 +280,25 @@ rm -f .git/index.lock<\n>
 ls
 git add .
 exit
+ls
+find -Rn
+man find
+find ".tsx" .
+q
+exit
+clear
+cd postgres/
+sudo cd postgres/
+cd -s postgres/
+cd --help
+chsh
+clear
+ls
+exit
+mkdir ~/.local/share/atuin/<\n>atuin init nu | save ~/.local/share/atuin/init.nu
+exit
+eit
+exit
+clear
+ls
+exit

@@ -72,7 +72,7 @@
     "format-icons": { "default": ["","",""] }
   },
   "custom/ethiopian_day": {
-    "exec": "ethiocal day",
+    "exec": "ethiocal",
     "interval": 60,
     "format": "{:>2}",              // shows only day in the bar
     "tooltip": false,

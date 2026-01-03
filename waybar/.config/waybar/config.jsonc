@@ -72,11 +72,11 @@
     "format-icons": { "default": ["","",""] }
   },
   "custom/ethiopian_day": {
-    "exec": "ethiocal",
-    "interval": 60,
-    "format": "{:>2}",              // shows only day in the bar
-    "tooltip": false,
-  },
+      "exec": "echo $(ethiocal); ethiocal full",
+      "interval": 3600,
+      "format": "{}",
+      "tooltip": true
+    },
 
   "pulseaudio#microphone": {
     "format": "{format_source}",
